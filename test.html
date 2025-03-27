@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      .navbar__list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+      }
+
+      .navbar__link {
+        position: relative;
+        text-decoration: none;
+        color: #333;
+        padding: 10px;
+        transition: color 0.3s ease;
+      }
+
+      /* Hiệu ứng active mặc định */
+      .navbar__link.active,
+      .navbar__link:active {
+        color: #007bff;
+      }
+
+      /* Hiệu ứng underline */
+      .navbar__link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #007bff;
+        transition: width 0.3s ease;
+      }
+
+      .navbar__link:hover::after,
+      .navbar__link.active::after,
+      .navbar__link:active::after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul class="navbar__list">
+        <li><a href="#" class="navbar__link active">HOME</a></li>
+        <li><a href="#" class="navbar__link">CATALOGS</a></li>
+        <li><a href="#" class="navbar__link">BLOG</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
