@@ -62,19 +62,25 @@ button {
   padding: 10px 0;
   transition: color 0.3s ease;
 }
-.navbar__link-active::after {
+.navbar__link::after {
   content: "";
   position: absolute;
   display: block;
-  width: 3.8rem;
+  width: 0;
   height: 0.4rem;
   margin-top: 0.4rem;
   background: var(--color-main, #07272e);
-  transition: width 0.3s ease-in;
+  /* transition: 0; */
+  transition: all 0.3s ease-in;
 }
-.navbar__link:hover .navbar__link-active::after,
+/* .navbar__link:hover .navbar__link-active::after,
 .navbar__link:active .navbar__link-active::after {
   width: 3.8rem;
+} */
+
+.navbar__link.active::after {
+  width: 3.8rem;
+  /* transition: all 0.3s ease-in; */
 }
 
 .mega-menu {
@@ -181,6 +187,7 @@ button {
   position: absolute;
   left: -50px;
   display: flex;
+  height: 100%;
   flex-direction: column;
   justify-content: space-between;
   color: var(--color-primary, #cdff9a);
@@ -194,7 +201,7 @@ button {
 .banner__info-text {
   transform: rotate(-180deg);
   writing-mode: vertical-rl;
-  max-height: 51.5rem;
+  /* max-height: 51.5rem; */
   height: 100%;
   display: flex;
   justify-content: space-between;

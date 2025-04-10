@@ -2,6 +2,13 @@
 <html lang="en">
   <head>
     <style>
+      .container {
+        width: 200px;
+        padding: 15px;
+        border: 1px solid #000000;
+        /* outline: 1px solid #952525; */
+        /* box-sizing: border-box; */
+      }
       .navbar__list {
         display: flex;
         list-style: none;
@@ -42,6 +49,8 @@
     </style>
   </head>
   <body>
+    <a href=""></a>
+    <div class="container">aa</div>
     <nav class="navbar">
       <ul class="navbar__list">
         <li><a href="#" class="navbar__link active">HOME</a></li>
@@ -49,5 +58,18 @@
         <li><a href="#" class="navbar__link">BLOG</a></li>
       </ul>
     </nav>
+    <script>
+      const numbers = [1, 1, 2, 3, 5];
+
+      const doubledNumbers1 = numbers.forEach((num) => {
+        return num * 2;
+      });
+
+      const doubledNumbers2 = numbers.map((num) => {
+        return num * 2;
+      });
+      console.log("doubledNumbers1", doubledNumbers1);
+      console.log("doubledNumbers2", doubledNumbers2);
+    </script>
   </body>
 </html>
